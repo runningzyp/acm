@@ -3,6 +3,7 @@ from flask import current_app, render_template
 from flask_mail import Message
 
 from . import mail
+from email import charset
 charset.add_charset('utf-8', charset.SHORTEST, charset.BASE64, 'utf-8')
 
 
