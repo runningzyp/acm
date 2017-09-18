@@ -5,4 +5,7 @@ from wtforms.validators import Required
 
 class NameForm(FlaskForm):
     username = StringField()
+    sex = StringField()
+    telnumber = StringField()
+    major = StringField()
     submit = SubmitField()
