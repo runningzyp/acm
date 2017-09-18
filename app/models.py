@@ -19,7 +19,8 @@ class User(db.Model):
     sex = db.Column(db.String(2))
     telnumber = db.Column(db.String(12))
     major = db.Column(db.String(20))
-
+    mail = db.Column(db.String(20))
+    about = db.Column(db.Text)
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
 
     def __repr__(self):

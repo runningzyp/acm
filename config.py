@@ -4,6 +4,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
     SECRET_KEY = 'hard to guess string'
+
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     MAIL_SERVER = 'smtp.163.com'
@@ -21,12 +22,9 @@ class Config:
 
 
 class DevelopmentConfig(Config):
-    DEBUG = True
+    DEBUG = False
 
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + \
-        os.path.join(basedir, 'data-dev.sqlite')
-
-    #SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:zhan@1234@rm-uf6h3xy2ty9zc6cu7o.mysql.rds.aliyuncs.com/acm'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:zhan@1234@rm-uf6h3xy2ty9zc6cu7o.mysql.rds.aliyuncs.com/acm'
 
 
 class TestingConfig(Config):
